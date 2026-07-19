@@ -12,7 +12,7 @@ app.post('/api/tryon', async (req, res) => {
     console.log("📥 Requête reçue sur Render !");
     const { person_image, garment_image } = req.body;
     const hfModelUrl = "https://api-inference.huggingface.co/models/levihsu/OOTDiffusion";
-    const hfApiKey = "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"; 
+    const hfApiKey = "process.env.HF_API_KEY"; 
 
     const response = await axios.post(hfModelUrl, {
       inputs: { image: person_image, cloth: garment_image }
