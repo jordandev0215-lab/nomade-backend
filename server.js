@@ -1,4 +1,3 @@
-// Contenu de server.js
 const dns = require('dns');
 dns.setDefaultResultOrder('ipv4first');
 
